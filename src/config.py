@@ -20,8 +20,8 @@ FASHION_CLASSES = [
 # CLIP Configuration
 CLIP_MODEL_NAME = "openai/clip-vit-base-patch32"
 SIMILARITY_THRESHOLDS = {
-    "exact_match": 0.9,
-    "similar_match": 0.75,
+    "exact_match": 0.15,
+    "similar_match": 0.10,
     "no_match": 0.0
 }
 
