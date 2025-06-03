@@ -20,17 +20,18 @@ def main():
 
     # Get the path to the test video
     data_dir = Path("data")
-    data_dir.mkdir(exist_ok=True)
+    videos_dir = data_dir / "videos"
+    videos_dir.mkdir(exist_ok=True, parents=True)
     
-    # You should place your test video in the data directory
-    video_path = data_dir / "2025-05-31_14-01-37_UTC.mp4"
-    
+    # Using the actual video file name
+    video_path = videos_dir / "2025-05-27_13-46-16_UTC.mp4"
+                               
     if not video_path.exists():
         print(f"\nPlease place a test video file at: {video_path}")
         return
 
     # Sample video metadata
-    caption = "Feeling cute in my new summer dress! Perfect for a garden party 🌸 #cottagecore #vintage #floral"
+    caption = "Sunkissed Summer has landed. Think golden hour, every hour. Easy silhouettes. Bare shoulders. Dresses that breathe. Made for holiday glow, even if you’re just stepping out for coffee."
     hashtags = ["cottagecore", "vintage", "floral", "summer", "dress"]
 
     print(f"\nProcessing video: {video_path}")
@@ -45,7 +46,7 @@ def main():
     )
 
     # Save results
-    output_path = "output.json"
+    output_path = f"outputs/output_{video_path.stem}.json"
     engine.save_results(results, output_path)
 
     # Print results
