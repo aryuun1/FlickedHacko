@@ -1,0 +1,13 @@
+torch>=2.0.0
+torchvision>=0.15.0
+ultralytics  # for YOLO
+transformers  # Hugging Face Transformers
+datasets      # Hugging Face Datasets
+tokenizers    # Hugging Face Tokenizers
+faiss-cpu     # FAISS (CPU version, use faiss-gpu for GPU support)
+spacy>=3.5.0
+clip @ git+https://github.com/openai/CLIP.git
+numpy>=1.24.0
+Pillow>=9.0.0
+tqdm
+scikit-learn>=1.0.0 
