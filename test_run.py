@@ -95,7 +95,7 @@ def main():
     results = engine.process_video(video_path)
     
     # Save results
-    output_path = os.path.join('outputs', f'output_{video_id}.json')
+    output_path = os.path.join(f'outputhaha_{video_id}.json')
     engine.save_results(results, output_path)
     print(f"\nResults saved to: {output_path}")
 
