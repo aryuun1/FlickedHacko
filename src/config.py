@@ -11,7 +11,7 @@ for dir_path in [DATA_DIR, MODELS_DIR, CACHE_DIR]:
     dir_path.mkdir(exist_ok=True, parents=True)
 
 # YOLO Configuration
-YOLO_MODEL_NAME = "yolov8n.pt"  # Can be upgraded to larger models if needed
+YOLO_MODEL_NAME = "yolov8n.pt"  #will upgrade agar lagega toh
 FASHION_CLASSES = [
     "top", "bottom", "dress", "jacket",
     "earring", "bag", "shoe", "accessory"

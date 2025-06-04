@@ -1,14 +1,50 @@
 from ultralytics import YOLO
 import numpy as np
 from typing import List, Dict, Any
-from .config import YOLO_MODEL_NAME, FASHION_CLASSES, MODELS_DIR
+from .config import YOLO_MODEL_NAME, FASHION_CLASSES
+
+# List of fashion-related classes that YOLO can detect
+FASHION_CLASSES = [
+    "person",  # For full-body shots
+    "tie",
+    "backpack",
+    "umbrella",  # Could be a fashion accessory
+    "handbag",
+    "suitcase",
+    "dress",
+    "hat",
+    "shoes",
+    "eyeglasses",
+    "shirt",
+    "pants",
+    "jacket",
+    "coat",
+    "skirt",
+    "dress",
+    "shorts",
+    "suit",
+    "scarf",
+    "gloves",
+    "boots",
+    "sandals",
+    "sneakers",
+    "watch",
+    "necklace",
+    "bracelet",
+    "earrings",
+    "sunglasses",
+    "belt",
+    "purse",
+    "wallet",
+    "bag"
+]
 
 class ObjectDetector:
     def __init__(self):
         """Initialize YOLO model for fashion item detection."""
         print("Initializing YOLO model...")
-        model_path = MODELS_DIR / YOLO_MODEL_NAME
-        self.model = YOLO(model_path if model_path.exists() else YOLO_MODEL_NAME)
+       
+        self.model = YOLO(YOLO_MODEL_NAME)
         print("YOLO model initialized")
         
     def detect_objects(self, frame: np.ndarray) -> List[Dict[str, Any]]:
@@ -17,7 +53,7 @@ class ObjectDetector:
         Returns list of detections with class, bbox, and confidence.
         """
         print("\nDetecting objects in frame...")
-        results = self.model(frame, conf=0.15)[0]  # Lower confidence for initial detection
+        results = self.model(frame, conf=0.01)[0]  # Even lower threshold
         detections = []
 
         print(f"Found {len(results.boxes)} potential objects")
@@ -26,8 +62,44 @@ class ObjectDetector:
             class_name = results.names[class_id]
             confidence = float(box.conf[0])
             
-            # Only process if class is in our fashion categories
-            if class_name.lower() in [c.lower() for c in FASHION_CLASSES]:
+            # Handle person detections specially - extract potential fashion items
+            if class_name.lower() == "person":
+                x1, y1, x2, y2 = box.xyxy[0].cpu().numpy()
+                
+                # Create regions for potential fashion items
+                # Upper body (shirt/top)
+                upper_height = (y2 - y1) * 0.3
+                upper_detection = {
+                    "class_name": "shirt",
+                    "bbox": {
+                        "x": int(x1),
+                        "y": int(y1),
+                        "width": int(x2 - x1),
+                        "height": int(upper_height)
+                    },
+                    "confidence": confidence * 0.8  # Slightly lower confidence
+                }
+                detections.append(upper_detection)
+                print(f"Detected shirt from person with confidence {confidence * 0.8:.2f}")
+                
+                # Lower body (pants/skirt)
+                lower_y = y1 + (y2 - y1) * 0.4  # Start below upper body
+                lower_height = (y2 - y1) * 0.4
+                lower_detection = {
+                    "class_name": "pants",
+                    "bbox": {
+                        "x": int(x1),
+                        "y": int(lower_y),
+                        "width": int(x2 - x1),
+                        "height": int(lower_height)
+                    },
+                    "confidence": confidence * 0.8
+                }
+                detections.append(lower_detection)
+                print(f"Detected pants from person with confidence {confidence * 0.8:.2f}")
+            
+            # Process other fashion items normally
+            elif class_name.lower() in [c.lower() for c in FASHION_CLASSES]:
                 x1, y1, x2, y2 = box.xyxy[0].cpu().numpy()
                 
                 detection = {

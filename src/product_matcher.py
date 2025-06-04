@@ -8,119 +8,128 @@ from PIL import Image
 from .config import CLIP_MODEL_NAME, SIMILARITY_THRESHOLDS, CACHE_DIR
 import cv2
 import requests
+import os
+import pandas as pd
 
 
 class ProductMatcher:
     def __init__(self):
-        """Initialize CLIP model and FAISS index for product matching."""
+        """Initialize CLIP model and load product catalog."""
         print("Initializing CLIP model...")
-        self.device = "cuda" if torch.cuda.is_available() else "cpu"
-        print(f"Using device: {self.device}")
-        self.model = CLIPModel.from_pretrained(CLIP_MODEL_NAME).to(self.device)
-        self.processor = CLIPProcessor.from_pretrained(CLIP_MODEL_NAME)
+        self.model = CLIPModel.from_pretrained("openai/clip-vit-base-patch32")
+        self.processor = CLIPProcessor.from_pretrained("openai/clip-vit-base-patch32")
         self.index = None
+        self.product_ids = None
+        
+        # Check if saved index exists
+        if os.path.exists("data/product_index.faiss") and os.path.exists("data/product_ids.npy"):
+            print("Loading pre-built product index...")
+            self.load_index()
+        else:
+            print("Building product index for the first time...")
+            self.build_product_index()
+            self.save_index()
+    
+    def save_index(self):
+        """Save FAISS index and product IDs to disk."""
+        print("\nSaving product index...")
+        faiss.write_index(self.index, "data/product_index.faiss")
+        np.save("data/product_ids.npy", self.product_ids)
+        print("Product index saved successfully")
+    
+    def load_index(self):
+        """Load FAISS index and product IDs from disk."""
+        self.index = faiss.read_index("data/product_index.faiss")
+        self.product_ids = np.load("data/product_ids.npy")
+        print(f"Loaded index with {self.index.ntotal} products")
+    
+    def build_product_index(self):
+        """Build FAISS index from first 1000 products in catalog as training set."""
+        # Read product catalog
+        df = pd.read_csv("data/images.csv")
+        
+        # Take only first 1000 products
+        df = df.head(1000)
+        print(f"\nBuilding index with first {len(df)} products as training set...")
+        
+        # Initialize FAISS index for cosine similarity
+        embedding_size = 512  # CLIP's image embedding size
+        self.index = faiss.IndexFlatIP(embedding_size)  # Inner product = cosine similarity for normalized vectors
         self.product_ids = []
-        self.product_details = []
-
-    def build_product_index(self, product_images: List[Dict[str, str]]):
-        """
-        Build FAISS index from product catalog images.
-        product_images: List of dicts with 'id' and 'image_url' keys
-        """
-        print(f"\nBuilding product index with {len(product_images)} products...")
-        embeddings = []
-        self.product_ids = []
-        self.product_details = []
-
-        for i, product in enumerate(product_images, 1):
-            print(f"\nProcessing product {i}/{len(product_images)}: {product['id']}")
-            print(f"URL: {product['image_url']}")
+        
+        # Process each product
+        successful_products = 0
+        for idx, row in df.iterrows():
+            print(f"\nProcessing product {idx+1}/{len(df)}: {row['id']}")
             
-            # Load and process image
+            # Download and process image
+            print(f"URL: {row['image_url']}")
             try:
-                image = self._load_image_from_url(product['image_url'])
-                if image is None:
-                    print(f"Failed to load image for product {product['id']}")
-                    continue
-
+                print("Fetching image from URL:", row['image_url'])
+                response = requests.get(row['image_url'], timeout=10)
+                response.raise_for_status()
+                image = Image.open(BytesIO(response.content))
+                print("Image loaded successfully")
+                
                 # Get image embedding
-                embedding = self._get_image_embedding(image)
-                embeddings.append(embedding)
-                self.product_ids.append(product['id'])
-                self.product_details.append(product)
-                print(f"Successfully processed product {product['id']}")
+                inputs = self.processor(images=image, return_tensors="pt")
+                image_features = self.model.get_image_features(**inputs)
+                embedding = image_features.detach().numpy()
+                
+                # Normalize embedding for cosine similarity
+                faiss.normalize_L2(embedding)
+                
+                # Add to index
+                self.index.add(embedding)
+                self.product_ids.append(str(row['id']))
+                successful_products += 1
+                
+                print(f"Successfully processed product {row['id']}")
             except Exception as e:
-                print(f"Error processing product {product['id']}: {str(e)}")
+                print(f"Error processing product {row['id']}: {str(e)}")
                 continue
-
-        if not embeddings:
-            raise ValueError("No valid product embeddings generated!")
-
-        # Convert to numpy array and normalize
-        print("\nFinalizing index...")
-        embeddings = np.vstack(embeddings)
-        faiss.normalize_L2(embeddings)
-
-        # Build FAISS index
-        self.index = faiss.IndexFlatIP(embeddings.shape[1])  # Inner product = cosine similarity for normalized vectors
-        self.index.add(embeddings)
-        print(f"Index built successfully with {len(self.product_ids)} products")
-
+        
+        print(f"\nFinished building index with {successful_products} successfully processed products")
+    
     def match_product(self, image: np.ndarray) -> Dict[str, any]:
-        """
-        Match detected product against catalog.
-        Returns match type and product ID.
-        """
+        """Match image with products in catalog."""
         if self.index is None:
             raise ValueError("Product index not built. Call build_product_index first.")
-
-        try:
-            # Convert OpenCV image to PIL
-            image_pil = Image.fromarray(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))
-            
-            # Get image embedding
-            embedding = self._get_image_embedding(image_pil)
-            
-            # Normalize embedding
-            faiss.normalize_L2(embedding)
-            
-            # Search index
-            similarities, indices = self.index.search(embedding, 3)  # Get top 3 matches for better chances
-            similarity = float(similarities[0][0])
-            
-            print(f"\nTop match similarity score: {similarity:.4f}")
-            
-            # Lower thresholds to increase matches
-            if similarity >= 0.15:  # Lowered from 0.25
-                match_type = "exact"
-            elif similarity >= 0.10:  # Lowered from 0.15
-                match_type = "similar"
-            else:
-                match_type = "no_match"
-            
-            matched_product = None
-            if match_type != "no_match":
-                product_idx = indices[0][0]
-                matched_product = self.product_details[product_idx]
-                print(f"Found {match_type} match: Product {matched_product['id']} with similarity {similarity:.4f}")
-            else:
-                print("No match found")
-                
-            return {
-                "match_type": match_type,
-                "matched_product_id": self.product_ids[indices[0][0]] if match_type != "no_match" else None,
-                "confidence": similarity,
-                "color": matched_product.get("color") if matched_product else None,
-                "product_type": matched_product.get("type") if matched_product else None
-            }
-        except Exception as e:
-            print(f"Error in product matching: {str(e)}")
-            return {
-                "match_type": "error",
-                "matched_product_id": None,
-                "confidence": 0.0,
-                "error": str(e)
-            }
+        
+        # Convert image to PIL
+        if isinstance(image, np.ndarray):
+            image = Image.fromarray(image)
+        
+        # Get image embedding
+        inputs = self.processor(images=image, return_tensors="pt")
+        image_features = self.model.get_image_features(**inputs)
+        query_embedding = image_features.detach().numpy()
+        
+        # Normalize query embedding for cosine similarity
+        faiss.normalize_L2(query_embedding)
+        
+        # Search index (cosine similarity is inner product of normalized vectors)
+        similarities, indices = self.index.search(query_embedding, 1)
+        similarity = float(similarities[0][0])  # Already cosine similarity
+        
+        print(f"\nTop match similarity score: {similarity:.4f}")
+        
+        # Determine match type based on similarity
+        if similarity >= 0.7:  # Adjusted for cosine similarity
+            match_type = "exact"
+            print(f"Found exact match: Product {self.product_ids[indices[0][0]]} with similarity {similarity}")
+        elif similarity >= 0.5:  # Adjusted for cosine similarity
+            match_type = "similar"
+            print(f"Found similar match: Product {self.product_ids[indices[0][0]]} with similarity {similarity}")
+        else:
+            match_type = "no_match"
+            print("No good match found")
+        
+        return {
+            "match_type": match_type,
+            "matched_product_id": self.product_ids[indices[0][0]] if match_type != "no_match" else None,
+            "confidence": similarity
+        }
 
     def _get_image_embedding(self, image: Image.Image) -> np.ndarray:
         """Get CLIP embedding for an image."""

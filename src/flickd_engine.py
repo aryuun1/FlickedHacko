@@ -5,8 +5,7 @@ import uuid
 import cv2
 import numpy as np
 from PIL import Image
-import requests
-from io import BytesIO
+
 
 
 
@@ -17,7 +16,7 @@ from .vibe_classifier import VibeClassifier
 
 class FlickdEngine:
     def __init__(self):
-        """Initialize all components of the Flickd engine."""
+        """initialization of all the components within the engine"""
         self.object_detector = ObjectDetector()
         self.product_matcher = ProductMatcher()
         self.vibe_classifier = VibeClassifier()
@@ -85,70 +84,80 @@ class FlickdEngine:
         
         return result
 
-    def process_video(self, 
-                     video_path: str, 
-                     caption: str = "", 
-                     hashtags: List[str] = None,
-                     transcript: str = "") -> Dict[str, Any]:
-        """
-        Process a video and return structured data about detected products and vibes.
-        
-        Args:
-            video_path: Path to video file
-            caption: Video caption text
-            hashtags: List of hashtags
-            transcript: Video transcript text
-        
-        Returns:
-            Dictionary containing video analysis results
-        """
-        # Generate video ID
-        video_id = str(uuid.uuid4())
+    def process_video(self, video_path: str, caption: str = "", hashtags: List[str] = None) -> Dict[str, any]:
+        """Process video and return detected products and vibes."""
+        print(f"\nProcessing: {video_path}")
         
         # Process text for vibe classification
         text_content = " ".join(filter(None, [
             caption,
-            " ".join(hashtags) if hashtags else "",
-            transcript
+            " ".join(hashtags) if hashtags else ""
         ]))
-        vibes = self.vibe_classifier.classify_vibes(text_content)
         
-        # Process video frames
-        products = []
-        with VideoProcessor(video_path) as video_proc:
-            for frame_number, frame in video_proc.extract_frames():
-                # Detect objects in frame
+        # Process frames
+        cap = cv2.VideoCapture(video_path)
+        frame_count = 0
+        
+        # Track unique product matches to avoid duplicates
+        unique_products = {}  # product_id -> {count, confidence, type}
+        
+        while cap.isOpened():
+            ret, frame = cap.read()
+            if not ret:
+                break
+                
+            if frame_count % 30 == 0:  # Process every 30th frame
+                # Detect objects
                 detections = self.object_detector.detect_objects(frame)
                 
+                # Match each detection with products
                 for detection in detections:
                     # Crop detected object
                     cropped_obj = self.object_detector.crop_detection(frame, detection["bbox"])
                     
-                    # Match product
+                    # Match with product catalog
                     match_result = self.product_matcher.match_product(cropped_obj)
                     
-                    if match_result["match_type"] != "no_match":
-                        product_info = {
-                            "frame_number": frame_number,
-                            "timestamp": video_proc.get_frame_timestamp(frame_number),
-                            "type": detection["class_name"],
-                            "bbox": detection["bbox"],
-                            "detection_confidence": detection["confidence"],
-                            "match_type": match_result["match_type"],
-                            "matched_product_id": match_result["matched_product_id"],
-                            "match_confidence": match_result["confidence"]
-                        }
-                        products.append(product_info)
+                    if match_result["match_type"] != "no_match" and match_result["matched_product_id"]:
+                        product_id = match_result["matched_product_id"]
+                        if product_id not in unique_products:
+                            unique_products[product_id] = {
+                                "type": detection["class_name"],
+                                "confidence": match_result["confidence"],
+                                "count": 1
+                            }
+                        else:
+                            # Update with higher confidence if found
+                            if match_result["confidence"] > unique_products[product_id]["confidence"]:
+                                unique_products[product_id]["confidence"] = match_result["confidence"]
+                            unique_products[product_id]["count"] += 1
+            
+            frame_count += 1
+            
+        cap.release()
         
-        # Prepare final output
-        result = {
-            "id": video_id,
+        # Get top products (those seen multiple times with high confidence)
+        top_products = []
+        for product_id, info in unique_products.items():
+            if info["count"] >= 2 and info["confidence"] >= 0.6:  # Must be seen at least twice with good confidence
+                top_products.append({
+                    "product_id": product_id,
+                    "type": info["type"],
+                    "match_confidence": info["confidence"]
+                })
+        
+        # Sort by confidence and take top 5
+        top_products = sorted(top_products, key=lambda x: x["match_confidence"], reverse=True)[:5]
+        
+        # Get vibes
+        vibes = self.vibe_classifier.classify_vibes(text_content)
+        
+        return {
+            "id": str(uuid.uuid4()),
             "type": "video",
             "vibes": vibes,
-            "products": products
+            "products": top_products
         }
-        
-        return result
 
     def save_results(self, results: Dict[str, Any], output_path: str):
         """Save analysis results to JSON file."""

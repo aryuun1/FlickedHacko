@@ -1,7 +1,1959 @@
 {
-  "video_id": "f691c47a-5d1d-407c-a84a-4ba84847a5bb",
+  "id": "6fe2e109-2c38-4fd5-883e-f77a01d46ead",
+  "type": "video",
   "vibes": [
-    "Cottagecore"
+    "Clean Girl"
   ],
-  "products": []
+  "products": [
+    {
+      "frame_number": 0,
+      "timestamp": 0.0,
+      "type": "shirt",
+      "bbox": {
+        "x": 5,
+        "y": 58,
+        "width": 672,
+        "height": 366
+      },
+      "detection_confidence": 0.6942375659942628,
+      "match_type": "exact",
+      "matched_product_id": "15232",
+      "match_confidence": 0.7190971374511719
+    },
+    {
+      "frame_number": 0,
+      "timestamp": 0.0,
+      "type": "pants",
+      "bbox": {
+        "x": 5,
+        "y": 546,
+        "width": 672,
+        "height": 488
+      },
+      "detection_confidence": 0.6942375659942628,
+      "match_type": "exact",
+      "matched_product_id": "15003",
+      "match_confidence": 0.7406984567642212
+    },
+    {
+      "frame_number": 0,
+      "timestamp": 0.0,
+      "type": "umbrella",
+      "bbox": {
+        "x": 4,
+        "y": 0,
+        "width": 715,
+        "height": 719
+      },
+      "detection_confidence": 0.3485002815723419,
+      "match_type": "exact",
+      "matched_product_id": "15232",
+      "match_confidence": 0.721405565738678
+    },
+    {
+      "frame_number": 0,
+      "timestamp": 0.0,
+      "type": "umbrella",
+      "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 719,
+        "height": 393
+      },
+      "detection_confidence": 0.08626539260149002,
+      "match_type": "exact",
+      "matched_product_id": "15232",
+      "match_confidence": 0.7157360315322876
+    },
+    {
+      "frame_number": 0,
+      "timestamp": 0.0,
+      "type": "shirt",
+      "bbox": {
+        "x": 625,
+        "y": 662,
+        "width": 93,
+        "height": 142
+      },
+      "detection_confidence": 0.029827821254730227,
+      "match_type": "exact",
+      "matched_product_id": "14981",
+      "match_confidence": 0.5772870779037476
+    },
+    {
+      "frame_number": 0,
+      "timestamp": 0.0,
+      "type": "pants",
+      "bbox": {
+        "x": 625,
+        "y": 852,
+        "width": 93,
+        "height": 189
+      },
+      "detection_confidence": 0.029827821254730227,
+      "match_type": "exact",
+      "matched_product_id": "14981",
+      "match_confidence": 0.6289812326431274
+    },
+    {
+      "frame_number": 0,
+      "timestamp": 0.0,
+      "type": "umbrella",
+      "bbox": {
+        "x": 7,
+        "y": 3,
+        "width": 712,
+        "height": 1087
+      },
+      "detection_confidence": 0.033740561455488205,
+      "match_type": "exact",
+      "matched_product_id": "15232",
+      "match_confidence": 0.8264037370681763
+    },
+    {
+      "frame_number": 0,
+      "timestamp": 0.0,
+      "type": "handbag",
+      "bbox": {
+        "x": 621,
+        "y": 660,
+        "width": 96,
+        "height": 420
+      },
+      "detection_confidence": 0.03371843323111534,
+      "match_type": "exact",
+      "matched_product_id": "14981",
+      "match_confidence": 0.5873342752456665
+    },
+    {
+      "frame_number": 0,
+      "timestamp": 0.0,
+      "type": "shirt",
+      "bbox": {
+        "x": 1,
+        "y": 752,
+        "width": 718,
+        "height": 157
+      },
+      "detection_confidence": 0.024086761474609378,
+      "match_type": "exact",
+      "matched_product_id": "14981",
+      "match_confidence": 0.6333591938018799
+    },
+    {
+      "frame_number": 0,
+      "timestamp": 0.0,
+      "type": "pants",
+      "bbox": {
+        "x": 1,
+        "y": 963,
+        "width": 718,
+        "height": 210
+      },
+      "detection_confidence": 0.024086761474609378,
+      "match_type": "exact",
+      "matched_product_id": "15099",
+      "match_confidence": 0.6774507164955139
+    },
+    {
+      "frame_number": 30,
+      "timestamp": 1.0,
+      "type": "shirt",
+      "bbox": {
+        "x": 5,
+        "y": 69,
+        "width": 688,
+        "height": 363
+      },
+      "detection_confidence": 0.7200610160827637,
+      "match_type": "exact",
+      "matched_product_id": "15232",
+      "match_confidence": 0.7449967861175537
+    },
+    {
+      "frame_number": 30,
+      "timestamp": 1.0,
+      "type": "pants",
+      "bbox": {
+        "x": 5,
+        "y": 553,
+        "width": 688,
+        "height": 484
+      },
+      "detection_confidence": 0.7200610160827637,
+      "match_type": "exact",
+      "matched_product_id": "14995",
+      "match_confidence": 0.7260201573371887
+    },
+    {
+      "frame_number": 30,
+      "timestamp": 1.0,
+      "type": "umbrella",
+      "bbox": {
+        "x": 4,
+        "y": 3,
+        "width": 715,
+        "height": 758
+      },
+      "detection_confidence": 0.3927968740463257,
+      "match_type": "exact",
+      "matched_product_id": "14980",
+      "match_confidence": 0.7203540802001953
+    },
+    {
+      "frame_number": 30,
+      "timestamp": 1.0,
+      "type": "umbrella",
+      "bbox": {
+        "x": 8,
+        "y": 0,
+        "width": 711,
+        "height": 484
+      },
+      "detection_confidence": 0.15619154274463654,
+      "match_type": "exact",
+      "matched_product_id": "15232",
+      "match_confidence": 0.7360730171203613
+    },
+    {
+      "frame_number": 30,
+      "timestamp": 1.0,
+      "type": "shirt",
+      "bbox": {
+        "x": 641,
+        "y": 673,
+        "width": 77,
+        "height": 158
+      },
+      "detection_confidence": 0.08897253274917603,
+      "match_type": "exact",
+      "matched_product_id": "15099",
+      "match_confidence": 0.5624222755432129
+    },
+    {
+      "frame_number": 30,
+      "timestamp": 1.0,
+      "type": "pants",
+      "bbox": {
+        "x": 641,
+        "y": 885,
+        "width": 77,
+        "height": 211
+      },
+      "detection_confidence": 0.08897253274917603,
+      "match_type": "exact",
+      "matched_product_id": "14981",
+      "match_confidence": 0.6462346315383911
+    },
+    {
+      "frame_number": 30,
+      "timestamp": 1.0,
+      "type": "handbag",
+      "bbox": {
+        "x": 609,
+        "y": 685,
+        "width": 107,
+        "height": 441
+      },
+      "detection_confidence": 0.029566936194896698,
+      "match_type": "exact",
+      "matched_product_id": "15003",
+      "match_confidence": 0.5569537878036499
+    },
+    {
+      "frame_number": 30,
+      "timestamp": 1.0,
+      "type": "umbrella",
+      "bbox": {
+        "x": 10,
+        "y": 0,
+        "width": 709,
+        "height": 251
+      },
+      "detection_confidence": 0.029000014066696167,
+      "match_type": "exact",
+      "matched_product_id": "15232",
+      "match_confidence": 0.6701262593269348
+    },
+    {
+      "frame_number": 30,
+      "timestamp": 1.0,
+      "type": "handbag",
+      "bbox": {
+        "x": 632,
+        "y": 688,
+        "width": 86,
+        "height": 348
+      },
+      "detection_confidence": 0.022788317874073982,
+      "match_type": "exact",
+      "matched_product_id": "14981",
+      "match_confidence": 0.5798702239990234
+    },
+    {
+      "frame_number": 30,
+      "timestamp": 1.0,
+      "type": "shirt",
+      "bbox": {
+        "x": 0,
+        "y": 787,
+        "width": 719,
+        "height": 147
+      },
+      "detection_confidence": 0.01481759250164032,
+      "match_type": "exact",
+      "matched_product_id": "15003",
+      "match_confidence": 0.6049607396125793
+    },
+    {
+      "frame_number": 30,
+      "timestamp": 1.0,
+      "type": "pants",
+      "bbox": {
+        "x": 0,
+        "y": 984,
+        "width": 719,
+        "height": 196
+      },
+      "detection_confidence": 0.01481759250164032,
+      "match_type": "exact",
+      "matched_product_id": "14981",
+      "match_confidence": 0.6977221965789795
+    },
+    {
+      "frame_number": 30,
+      "timestamp": 1.0,
+      "type": "handbag",
+      "bbox": {
+        "x": 559,
+        "y": 674,
+        "width": 154,
+        "height": 425
+      },
+      "detection_confidence": 0.01703793555498123,
+      "match_type": "exact",
+      "matched_product_id": "15003",
+      "match_confidence": 0.6024222373962402
+    },
+    {
+      "frame_number": 30,
+      "timestamp": 1.0,
+      "type": "umbrella",
+      "bbox": {
+        "x": 8,
+        "y": 0,
+        "width": 707,
+        "height": 117
+      },
+      "detection_confidence": 0.011859762482345104,
+      "match_type": "exact",
+      "matched_product_id": "14981",
+      "match_confidence": 0.6394177675247192
+    },
+    {
+      "frame_number": 30,
+      "timestamp": 1.0,
+      "type": "umbrella",
+      "bbox": {
+        "x": 26,
+        "y": 21,
+        "width": 693,
+        "height": 1100
+      },
+      "detection_confidence": 0.010807876475155354,
+      "match_type": "exact",
+      "matched_product_id": "15232",
+      "match_confidence": 0.7820833921432495
+    },
+    {
+      "frame_number": 60,
+      "timestamp": 2.0,
+      "type": "tie",
+      "bbox": {
+        "x": 227,
+        "y": 921,
+        "width": 238,
+        "height": 358
+      },
+      "detection_confidence": 0.8897130489349365,
+      "match_type": "exact",
+      "matched_product_id": "15099",
+      "match_confidence": 0.6868616342544556
+    },
+    {
+      "frame_number": 60,
+      "timestamp": 2.0,
+      "type": "shirt",
+      "bbox": {
+        "x": 37,
+        "y": 111,
+        "width": 682,
+        "height": 349
+      },
+      "detection_confidence": 0.6863401412963868,
+      "match_type": "exact",
+      "matched_product_id": "15232",
+      "match_confidence": 0.6625272035598755
+    },
+    {
+      "frame_number": 60,
+      "timestamp": 2.0,
+      "type": "pants",
+      "bbox": {
+        "x": 37,
+        "y": 577,
+        "width": 682,
+        "height": 465
+      },
+      "detection_confidence": 0.6863401412963868,
+      "match_type": "exact",
+      "matched_product_id": "15232",
+      "match_confidence": 0.7807759046554565
+    },
+    {
+      "frame_number": 60,
+      "timestamp": 2.0,
+      "type": "tie",
+      "bbox": {
+        "x": 364,
+        "y": 919,
+        "width": 101,
+        "height": 358
+      },
+      "detection_confidence": 0.012137806974351406,
+      "match_type": "exact",
+      "matched_product_id": "15099",
+      "match_confidence": 0.6135538816452026
+    },
+    {
+      "frame_number": 60,
+      "timestamp": 2.0,
+      "type": "tie",
+      "bbox": {
+        "x": 364,
+        "y": 917,
+        "width": 101,
+        "height": 184
+      },
+      "detection_confidence": 0.01181576494127512,
+      "match_type": "exact",
+      "matched_product_id": "15099",
+      "match_confidence": 0.6495732069015503
+    },
+    {
+      "frame_number": 90,
+      "timestamp": 3.0,
+      "type": "shirt",
+      "bbox": {
+        "x": 308,
+        "y": 182,
+        "width": 343,
+        "height": 309
+      },
+      "detection_confidence": 0.705355978012085,
+      "match_type": "exact",
+      "matched_product_id": "15232",
+      "match_confidence": 0.6562418937683105
+    },
+    {
+      "frame_number": 90,
+      "timestamp": 3.0,
+      "type": "pants",
+      "bbox": {
+        "x": 308,
+        "y": 594,
+        "width": 343,
+        "height": 412
+      },
+      "detection_confidence": 0.705355978012085,
+      "match_type": "exact",
+      "matched_product_id": "15181",
+      "match_confidence": 0.7378936409950256
+    },
+    {
+      "frame_number": 90,
+      "timestamp": 3.0,
+      "type": "shirt",
+      "bbox": {
+        "x": 38,
+        "y": 132,
+        "width": 305,
+        "height": 340
+      },
+      "detection_confidence": 0.6427880764007569,
+      "match_type": "exact",
+      "matched_product_id": "15232",
+      "match_confidence": 0.6894620656967163
+    },
+    {
+      "frame_number": 90,
+      "timestamp": 3.0,
+      "type": "pants",
+      "bbox": {
+        "x": 38,
+        "y": 586,
+        "width": 305,
+        "height": 453
+      },
+      "detection_confidence": 0.6427880764007569,
+      "match_type": "exact",
+      "matched_product_id": "15003",
+      "match_confidence": 0.5869079232215881
+    },
+    {
+      "frame_number": 90,
+      "timestamp": 3.0,
+      "type": "handbag",
+      "bbox": {
+        "x": 515,
+        "y": 758,
+        "width": 135,
+        "height": 335
+      },
+      "detection_confidence": 0.25133007764816284,
+      "match_type": "exact",
+      "matched_product_id": "15181",
+      "match_confidence": 0.670021116733551
+    },
+    {
+      "frame_number": 90,
+      "timestamp": 3.0,
+      "type": "handbag",
+      "bbox": {
+        "x": 568,
+        "y": 756,
+        "width": 80,
+        "height": 334
+      },
+      "detection_confidence": 0.16818474233150482,
+      "match_type": "exact",
+      "matched_product_id": "14981",
+      "match_confidence": 0.6773421764373779
+    },
+    {
+      "frame_number": 90,
+      "timestamp": 3.0,
+      "type": "shirt",
+      "bbox": {
+        "x": 0,
+        "y": 252,
+        "width": 140,
+        "height": 296
+      },
+      "detection_confidence": 0.11472531557083131,
+      "match_type": "exact",
+      "matched_product_id": "15003",
+      "match_confidence": 0.6255003809928894
+    },
+    {
+      "frame_number": 90,
+      "timestamp": 3.0,
+      "type": "pants",
+      "bbox": {
+        "x": 0,
+        "y": 647,
+        "width": 140,
+        "height": 395
+      },
+      "detection_confidence": 0.11472531557083131,
+      "match_type": "exact",
+      "matched_product_id": "14981",
+      "match_confidence": 0.6184956431388855
+    },
+    {
+      "frame_number": 90,
+      "timestamp": 3.0,
+      "type": "shirt",
+      "bbox": {
+        "x": 0,
+        "y": 302,
+        "width": 145,
+        "height": 28
+      },
+      "detection_confidence": 0.10904049873352051,
+      "match_type": "exact",
+      "matched_product_id": "15003",
+      "match_confidence": 0.5850602388381958
+    },
+    {
+      "frame_number": 90,
+      "timestamp": 3.0,
+      "type": "pants",
+      "bbox": {
+        "x": 0,
+        "y": 341,
+        "width": 145,
+        "height": 38
+      },
+      "detection_confidence": 0.10904049873352051,
+      "match_type": "exact",
+      "matched_product_id": "14981",
+      "match_confidence": 0.6060428619384766
+    },
+    {
+      "frame_number": 90,
+      "timestamp": 3.0,
+      "type": "handbag",
+      "bbox": {
+        "x": 461,
+        "y": 756,
+        "width": 186,
+        "height": 333
+      },
+      "detection_confidence": 0.12938454747200012,
+      "match_type": "exact",
+      "matched_product_id": "15099",
+      "match_confidence": 0.6998863220214844
+    },
+    {
+      "frame_number": 90,
+      "timestamp": 3.0,
+      "type": "handbag",
+      "bbox": {
+        "x": 587,
+        "y": 753,
+        "width": 56,
+        "height": 328
+      },
+      "detection_confidence": 0.03038601018488407,
+      "match_type": "exact",
+      "matched_product_id": "14981",
+      "match_confidence": 0.7127819061279297
+    },
+    {
+      "frame_number": 90,
+      "timestamp": 3.0,
+      "type": "tie",
+      "bbox": {
+        "x": 212,
+        "y": 331,
+        "width": 19,
+        "height": 44
+      },
+      "detection_confidence": 0.03029255010187626,
+      "match_type": "exact",
+      "matched_product_id": "14981",
+      "match_confidence": 0.6160674095153809
+    },
+    {
+      "frame_number": 90,
+      "timestamp": 3.0,
+      "type": "shirt",
+      "bbox": {
+        "x": 561,
+        "y": 61,
+        "width": 158,
+        "height": 252
+      },
+      "detection_confidence": 0.020726054906845093,
+      "match_type": "exact",
+      "matched_product_id": "14977",
+      "match_confidence": 0.5794182419776917
+    },
+    {
+      "frame_number": 90,
+      "timestamp": 3.0,
+      "type": "pants",
+      "bbox": {
+        "x": 561,
+        "y": 398,
+        "width": 158,
+        "height": 337
+      },
+      "detection_confidence": 0.020726054906845093,
+      "match_type": "exact",
+      "matched_product_id": "15003",
+      "match_confidence": 0.6668061017990112
+    },
+    {
+      "frame_number": 90,
+      "timestamp": 3.0,
+      "type": "tie",
+      "bbox": {
+        "x": 201,
+        "y": 336,
+        "width": 23,
+        "height": 50
+      },
+      "detection_confidence": 0.022961879149079323,
+      "match_type": "exact",
+      "matched_product_id": "14981",
+      "match_confidence": 0.6706116795539856
+    },
+    {
+      "frame_number": 90,
+      "timestamp": 3.0,
+      "type": "tie",
+      "bbox": {
+        "x": 209,
+        "y": 333,
+        "width": 19,
+        "height": 53
+      },
+      "detection_confidence": 0.01966870203614235,
+      "match_type": "exact",
+      "matched_product_id": "14981",
+      "match_confidence": 0.6582446694374084
+    },
+    {
+      "frame_number": 90,
+      "timestamp": 3.0,
+      "type": "shirt",
+      "bbox": {
+        "x": 589,
+        "y": 356,
+        "width": 54,
+        "height": 131
+      },
+      "detection_confidence": 0.013420064747333527,
+      "match_type": "exact",
+      "matched_product_id": "15003",
+      "match_confidence": 0.6033636331558228
+    },
+    {
+      "frame_number": 90,
+      "timestamp": 3.0,
+      "type": "pants",
+      "bbox": {
+        "x": 589,
+        "y": 531,
+        "width": 54,
+        "height": 175
+      },
+      "detection_confidence": 0.013420064747333527,
+      "match_type": "exact",
+      "matched_product_id": "15003",
+      "match_confidence": 0.6034645438194275
+    },
+    {
+      "frame_number": 90,
+      "timestamp": 3.0,
+      "type": "shirt",
+      "bbox": {
+        "x": 3,
+        "y": 301,
+        "width": 144,
+        "height": 88
+      },
+      "detection_confidence": 0.01242050901055336,
+      "match_type": "exact",
+      "matched_product_id": "15003",
+      "match_confidence": 0.6229797601699829
+    },
+    {
+      "frame_number": 90,
+      "timestamp": 3.0,
+      "type": "pants",
+      "bbox": {
+        "x": 3,
+        "y": 419,
+        "width": 144,
+        "height": 118
+      },
+      "detection_confidence": 0.01242050901055336,
+      "match_type": "exact",
+      "matched_product_id": "15003",
+      "match_confidence": 0.6155962347984314
+    },
+    {
+      "frame_number": 90,
+      "timestamp": 3.0,
+      "type": "handbag",
+      "bbox": {
+        "x": 592,
+        "y": 766,
+        "width": 51,
+        "height": 156
+      },
+      "detection_confidence": 0.012122231535613537,
+      "match_type": "exact",
+      "matched_product_id": "14981",
+      "match_confidence": 0.6323119401931763
+    },
+    {
+      "frame_number": 90,
+      "timestamp": 3.0,
+      "type": "tie",
+      "bbox": {
+        "x": 183,
+        "y": 310,
+        "width": 50,
+        "height": 75
+      },
+      "detection_confidence": 0.011316501535475254,
+      "match_type": "exact",
+      "matched_product_id": "14981",
+      "match_confidence": 0.69300776720047
+    },
+    {
+      "frame_number": 90,
+      "timestamp": 3.0,
+      "type": "handbag",
+      "bbox": {
+        "x": 393,
+        "y": 754,
+        "width": 255,
+        "height": 428
+      },
+      "detection_confidence": 0.010071086697280407,
+      "match_type": "exact",
+      "matched_product_id": "15181",
+      "match_confidence": 0.6745134592056274
+    },
+    {
+      "frame_number": 120,
+      "timestamp": 4.0,
+      "type": "shirt",
+      "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 714,
+        "height": 382
+      },
+      "detection_confidence": 0.7191623210906983,
+      "match_type": "exact",
+      "matched_product_id": "14981",
+      "match_confidence": 0.7300716638565063
+    },
+    {
+      "frame_number": 120,
+      "timestamp": 4.0,
+      "type": "pants",
+      "bbox": {
+        "x": 0,
+        "y": 510,
+        "width": 714,
+        "height": 510
+      },
+      "detection_confidence": 0.7191623210906983,
+      "match_type": "exact",
+      "matched_product_id": "15003",
+      "match_confidence": 0.6369960904121399
+    },
+    {
+      "frame_number": 120,
+      "timestamp": 4.0,
+      "type": "shirt",
+      "bbox": {
+        "x": 521,
+        "y": 992,
+        "width": 198,
+        "height": 64
+      },
+      "detection_confidence": 0.13200677633285524,
+      "match_type": "exact",
+      "matched_product_id": "15003",
+      "match_confidence": 0.6027690768241882
+    },
+    {
+      "frame_number": 120,
+      "timestamp": 4.0,
+      "type": "pants",
+      "bbox": {
+        "x": 521,
+        "y": 1077,
+        "width": 198,
+        "height": 85
+      },
+      "detection_confidence": 0.13200677633285524,
+      "match_type": "exact",
+      "matched_product_id": "14981",
+      "match_confidence": 0.6230331063270569
+    },
+    {
+      "frame_number": 120,
+      "timestamp": 4.0,
+      "type": "shirt",
+      "bbox": {
+        "x": 509,
+        "y": 993,
+        "width": 210,
+        "height": 85
+      },
+      "detection_confidence": 0.06657124757766723,
+      "match_type": "exact",
+      "matched_product_id": "15003",
+      "match_confidence": 0.6126726269721985
+    },
+    {
+      "frame_number": 120,
+      "timestamp": 4.0,
+      "type": "pants",
+      "bbox": {
+        "x": 509,
+        "y": 1107,
+        "width": 210,
+        "height": 114
+      },
+      "detection_confidence": 0.06657124757766723,
+      "match_type": "exact",
+      "matched_product_id": "15003",
+      "match_confidence": 0.6454304456710815
+    },
+    {
+      "frame_number": 120,
+      "timestamp": 4.0,
+      "type": "shirt",
+      "bbox": {
+        "x": 331,
+        "y": 994,
+        "width": 387,
+        "height": 85
+      },
+      "detection_confidence": 0.04037423133850098,
+      "match_type": "exact",
+      "matched_product_id": "15003",
+      "match_confidence": 0.5735938549041748
+    },
+    {
+      "frame_number": 120,
+      "timestamp": 4.0,
+      "type": "pants",
+      "bbox": {
+        "x": 331,
+        "y": 1108,
+        "width": 387,
+        "height": 113
+      },
+      "detection_confidence": 0.04037423133850098,
+      "match_type": "exact",
+      "matched_product_id": "15279",
+      "match_confidence": 0.6318075656890869
+    },
+    {
+      "frame_number": 120,
+      "timestamp": 4.0,
+      "type": "shirt",
+      "bbox": {
+        "x": 327,
+        "y": 1029,
+        "width": 253,
+        "height": 74
+      },
+      "detection_confidence": 0.03255438804626465,
+      "match_type": "exact",
+      "matched_product_id": "15003",
+      "match_confidence": 0.5905036330223083
+    },
+    {
+      "frame_number": 120,
+      "timestamp": 4.0,
+      "type": "pants",
+      "bbox": {
+        "x": 327,
+        "y": 1129,
+        "width": 253,
+        "height": 99
+      },
+      "detection_confidence": 0.03255438804626465,
+      "match_type": "exact",
+      "matched_product_id": "14981",
+      "match_confidence": 0.6896971464157104
+    },
+    {
+      "frame_number": 120,
+      "timestamp": 4.0,
+      "type": "shirt",
+      "bbox": {
+        "x": 329,
+        "y": 778,
+        "width": 390,
+        "height": 150
+      },
+      "detection_confidence": 0.012875913083553315,
+      "match_type": "exact",
+      "matched_product_id": "15003",
+      "match_confidence": 0.6458579301834106
+    },
+    {
+      "frame_number": 120,
+      "timestamp": 4.0,
+      "type": "pants",
+      "bbox": {
+        "x": 329,
+        "y": 978,
+        "width": 390,
+        "height": 200
+      },
+      "detection_confidence": 0.012875913083553315,
+      "match_type": "exact",
+      "matched_product_id": "15243",
+      "match_confidence": 0.6040133833885193
+    },
+    {
+      "frame_number": 150,
+      "timestamp": 5.0,
+      "type": "shirt",
+      "bbox": {
+        "x": 0,
+        "y": 3,
+        "width": 720,
+        "height": 382
+      },
+      "detection_confidence": 0.7261921882629395,
+      "match_type": "exact",
+      "matched_product_id": "15232",
+      "match_confidence": 0.6117194294929504
+    },
+    {
+      "frame_number": 150,
+      "timestamp": 5.0,
+      "type": "pants",
+      "bbox": {
+        "x": 0,
+        "y": 513,
+        "width": 720,
+        "height": 510
+      },
+      "detection_confidence": 0.7261921882629395,
+      "match_type": "exact",
+      "matched_product_id": "15003",
+      "match_confidence": 0.7178608179092407
+    },
+    {
+      "frame_number": 150,
+      "timestamp": 5.0,
+      "type": "shirt",
+      "bbox": {
+        "x": 0,
+        "y": 186,
+        "width": 268,
+        "height": 245
+      },
+      "detection_confidence": 0.013601866364479066,
+      "match_type": "exact",
+      "matched_product_id": "14995",
+      "match_confidence": 0.7102041840553284
+    },
+    {
+      "frame_number": 150,
+      "timestamp": 5.0,
+      "type": "pants",
+      "bbox": {
+        "x": 0,
+        "y": 514,
+        "width": 268,
+        "height": 327
+      },
+      "detection_confidence": 0.013601866364479066,
+      "match_type": "exact",
+      "matched_product_id": "15260",
+      "match_confidence": 0.6438169479370117
+    },
+    {
+      "frame_number": 150,
+      "timestamp": 5.0,
+      "type": "shirt",
+      "bbox": {
+        "x": 1,
+        "y": 439,
+        "width": 90,
+        "height": 169
+      },
+      "detection_confidence": 0.009373237192630769,
+      "match_type": "exact",
+      "matched_product_id": "14981",
+      "match_confidence": 0.6421623229980469
+    },
+    {
+      "frame_number": 150,
+      "timestamp": 5.0,
+      "type": "pants",
+      "bbox": {
+        "x": 1,
+        "y": 665,
+        "width": 90,
+        "height": 225
+      },
+      "detection_confidence": 0.009373237192630769,
+      "match_type": "exact",
+      "matched_product_id": "15003",
+      "match_confidence": 0.6081273555755615
+    },
+    {
+      "frame_number": 150,
+      "timestamp": 5.0,
+      "type": "shirt",
+      "bbox": {
+        "x": 3,
+        "y": 654,
+        "width": 80,
+        "height": 103
+      },
+      "detection_confidence": 0.008748789131641389,
+      "match_type": "exact",
+      "matched_product_id": "14981",
+      "match_confidence": 0.6342052817344666
+    },
+    {
+      "frame_number": 150,
+      "timestamp": 5.0,
+      "type": "pants",
+      "bbox": {
+        "x": 3,
+        "y": 791,
+        "width": 80,
+        "height": 137
+      },
+      "detection_confidence": 0.008748789131641389,
+      "match_type": "exact",
+      "matched_product_id": "15003",
+      "match_confidence": 0.6334461569786072
+    },
+    {
+      "frame_number": 180,
+      "timestamp": 6.0,
+      "type": "shirt",
+      "bbox": {
+        "x": 311,
+        "y": 1,
+        "width": 407,
+        "height": 194
+      },
+      "detection_confidence": 0.15014662742614748,
+      "match_type": "exact",
+      "matched_product_id": "15003",
+      "match_confidence": 0.5905067920684814
+    },
+    {
+      "frame_number": 180,
+      "timestamp": 6.0,
+      "type": "pants",
+      "bbox": {
+        "x": 311,
+        "y": 260,
+        "width": 407,
+        "height": 259
+      },
+      "detection_confidence": 0.15014662742614748,
+      "match_type": "exact",
+      "matched_product_id": "15099",
+      "match_confidence": 0.6946666836738586
+    },
+    {
+      "frame_number": 180,
+      "timestamp": 6.0,
+      "type": "shirt",
+      "bbox": {
+        "x": 256,
+        "y": 925,
+        "width": 463,
+        "height": 77
+      },
+      "detection_confidence": 0.12392920255661011,
+      "match_type": "exact",
+      "matched_product_id": "14981",
+      "match_confidence": 0.6043321490287781
+    },
+    {
+      "frame_number": 180,
+      "timestamp": 6.0,
+      "type": "pants",
+      "bbox": {
+        "x": 256,
+        "y": 1028,
+        "width": 463,
+        "height": 103
+      },
+      "detection_confidence": 0.12392920255661011,
+      "match_type": "exact",
+      "matched_product_id": "15003",
+      "match_confidence": 0.6603437066078186
+    },
+    {
+      "frame_number": 180,
+      "timestamp": 6.0,
+      "type": "shirt",
+      "bbox": {
+        "x": 39,
+        "y": 0,
+        "width": 680,
+        "height": 373
+      },
+      "detection_confidence": 0.07763244509696961,
+      "match_type": "exact",
+      "matched_product_id": "15232",
+      "match_confidence": 0.7143551111221313
+    },
+    {
+      "frame_number": 180,
+      "timestamp": 6.0,
+      "type": "pants",
+      "bbox": {
+        "x": 39,
+        "y": 498,
+        "width": 680,
+        "height": 498
+      },
+      "detection_confidence": 0.07763244509696961,
+      "match_type": "exact",
+      "matched_product_id": "15003",
+      "match_confidence": 0.6821838617324829
+    },
+    {
+      "frame_number": 180,
+      "timestamp": 6.0,
+      "type": "umbrella",
+      "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 718,
+        "height": 705
+      },
+      "detection_confidence": 0.06453268975019455,
+      "match_type": "exact",
+      "matched_product_id": "15232",
+      "match_confidence": 0.683811366558075
+    },
+    {
+      "frame_number": 180,
+      "timestamp": 6.0,
+      "type": "shirt",
+      "bbox": {
+        "x": 44,
+        "y": 2,
+        "width": 675,
+        "height": 195
+      },
+      "detection_confidence": 0.03785322308540345,
+      "match_type": "exact",
+      "matched_product_id": "15232",
+      "match_confidence": 0.6403704881668091
+    },
+    {
+      "frame_number": 180,
+      "timestamp": 6.0,
+      "type": "pants",
+      "bbox": {
+        "x": 44,
+        "y": 262,
+        "width": 675,
+        "height": 260
+      },
+      "detection_confidence": 0.03785322308540345,
+      "match_type": "exact",
+      "matched_product_id": "15232",
+      "match_confidence": 0.7222159504890442
+    },
+    {
+      "frame_number": 180,
+      "timestamp": 6.0,
+      "type": "shirt",
+      "bbox": {
+        "x": 255,
+        "y": 292,
+        "width": 464,
+        "height": 277
+      },
+      "detection_confidence": 0.03414931297302246,
+      "match_type": "exact",
+      "matched_product_id": "15232",
+      "match_confidence": 0.7223984003067017
+    },
+    {
+      "frame_number": 180,
+      "timestamp": 6.0,
+      "type": "pants",
+      "bbox": {
+        "x": 255,
+        "y": 662,
+        "width": 464,
+        "height": 369
+      },
+      "detection_confidence": 0.03414931297302246,
+      "match_type": "exact",
+      "matched_product_id": "14981",
+      "match_confidence": 0.6971662640571594
+    },
+    {
+      "frame_number": 180,
+      "timestamp": 6.0,
+      "type": "umbrella",
+      "bbox": {
+        "x": 319,
+        "y": 0,
+        "width": 400,
+        "height": 217
+      },
+      "detection_confidence": 0.04119443520903587,
+      "match_type": "exact",
+      "matched_product_id": "15099",
+      "match_confidence": 0.6380981206893921
+    },
+    {
+      "frame_number": 180,
+      "timestamp": 6.0,
+      "type": "umbrella",
+      "bbox": {
+        "x": 315,
+        "y": 0,
+        "width": 404,
+        "height": 645
+      },
+      "detection_confidence": 0.036786679178476334,
+      "match_type": "exact",
+      "matched_product_id": "15232",
+      "match_confidence": 0.7145465612411499
+    },
+    {
+      "frame_number": 180,
+      "timestamp": 6.0,
+      "type": "shirt",
+      "bbox": {
+        "x": 401,
+        "y": 194,
+        "width": 318,
+        "height": 135
+      },
+      "detection_confidence": 0.014541763067245484,
+      "match_type": "exact",
+      "matched_product_id": "15099",
+      "match_confidence": 0.6392524838447571
+    },
+    {
+      "frame_number": 180,
+      "timestamp": 6.0,
+      "type": "pants",
+      "bbox": {
+        "x": 401,
+        "y": 374,
+        "width": 318,
+        "height": 180
+      },
+      "detection_confidence": 0.014541763067245484,
+      "match_type": "exact",
+      "matched_product_id": "15003",
+      "match_confidence": 0.6108642816543579
+    },
+    {
+      "frame_number": 180,
+      "timestamp": 6.0,
+      "type": "umbrella",
+      "bbox": {
+        "x": 112,
+        "y": 115,
+        "width": 387,
+        "height": 469
+      },
+      "detection_confidence": 0.013047712855041027,
+      "match_type": "exact",
+      "matched_product_id": "15232",
+      "match_confidence": 0.7153072357177734
+    },
+    {
+      "frame_number": 180,
+      "timestamp": 6.0,
+      "type": "shirt",
+      "bbox": {
+        "x": 317,
+        "y": 0,
+        "width": 401,
+        "height": 65
+      },
+      "detection_confidence": 0.010379244387149811,
+      "match_type": "exact",
+      "matched_product_id": "14981",
+      "match_confidence": 0.5872766375541687
+    },
+    {
+      "frame_number": 180,
+      "timestamp": 6.0,
+      "type": "pants",
+      "bbox": {
+        "x": 317,
+        "y": 87,
+        "width": 401,
+        "height": 87
+      },
+      "detection_confidence": 0.010379244387149811,
+      "match_type": "exact",
+      "matched_product_id": "14981",
+      "match_confidence": 0.6357644200325012
+    },
+    {
+      "frame_number": 210,
+      "timestamp": 7.0,
+      "type": "shirt",
+      "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 719,
+        "height": 383
+      },
+      "detection_confidence": 0.7102602005004883,
+      "match_type": "exact",
+      "matched_product_id": "15099",
+      "match_confidence": 0.7266864776611328
+    },
+    {
+      "frame_number": 210,
+      "timestamp": 7.0,
+      "type": "pants",
+      "bbox": {
+        "x": 0,
+        "y": 511,
+        "width": 719,
+        "height": 511
+      },
+      "detection_confidence": 0.7102602005004883,
+      "match_type": "exact",
+      "matched_product_id": "15232",
+      "match_confidence": 0.7198801040649414
+    },
+    {
+      "frame_number": 210,
+      "timestamp": 7.0,
+      "type": "shirt",
+      "bbox": {
+        "x": 227,
+        "y": 6,
+        "width": 492,
+        "height": 381
+      },
+      "detection_confidence": 0.02560541033744812,
+      "match_type": "exact",
+      "matched_product_id": "15099",
+      "match_confidence": 0.7215825319290161
+    },
+    {
+      "frame_number": 210,
+      "timestamp": 7.0,
+      "type": "pants",
+      "bbox": {
+        "x": 227,
+        "y": 514,
+        "width": 492,
+        "height": 508
+      },
+      "detection_confidence": 0.02560541033744812,
+      "match_type": "exact",
+      "matched_product_id": "15232",
+      "match_confidence": 0.7480506896972656
+    },
+    {
+      "frame_number": 210,
+      "timestamp": 7.0,
+      "type": "tie",
+      "bbox": {
+        "x": 226,
+        "y": 46,
+        "width": 493,
+        "height": 1230
+      },
+      "detection_confidence": 0.022763792425394058,
+      "match_type": "exact",
+      "matched_product_id": "15232",
+      "match_confidence": 0.7420329451560974
+    },
+    {
+      "frame_number": 210,
+      "timestamp": 7.0,
+      "type": "tie",
+      "bbox": {
+        "x": 5,
+        "y": 532,
+        "width": 262,
+        "height": 747
+      },
+      "detection_confidence": 0.01176037359982729,
+      "match_type": "exact",
+      "matched_product_id": "14981",
+      "match_confidence": 0.6298428177833557
+    },
+    {
+      "frame_number": 240,
+      "timestamp": 8.0,
+      "type": "shirt",
+      "bbox": {
+        "x": 398,
+        "y": 302,
+        "width": 301,
+        "height": 81
+      },
+      "detection_confidence": 0.3666125774383545,
+      "match_type": "exact",
+      "matched_product_id": "15003",
+      "match_confidence": 0.6076744794845581
+    },
+    {
+      "frame_number": 240,
+      "timestamp": 8.0,
+      "type": "pants",
+      "bbox": {
+        "x": 398,
+        "y": 411,
+        "width": 301,
+        "height": 108
+      },
+      "detection_confidence": 0.3666125774383545,
+      "match_type": "exact",
+      "matched_product_id": "15003",
+      "match_confidence": 0.633874237537384
+    },
+    {
+      "frame_number": 240,
+      "timestamp": 8.0,
+      "type": "shirt",
+      "bbox": {
+        "x": 0,
+        "y": 303,
+        "width": 705,
+        "height": 136
+      },
+      "detection_confidence": 0.25262198448181156,
+      "match_type": "exact",
+      "matched_product_id": "15003",
+      "match_confidence": 0.6462880373001099
+    },
+    {
+      "frame_number": 240,
+      "timestamp": 8.0,
+      "type": "pants",
+      "bbox": {
+        "x": 0,
+        "y": 485,
+        "width": 705,
+        "height": 182
+      },
+      "detection_confidence": 0.25262198448181156,
+      "match_type": "exact",
+      "matched_product_id": "14981",
+      "match_confidence": 0.5933394432067871
+    },
+    {
+      "frame_number": 240,
+      "timestamp": 8.0,
+      "type": "shirt",
+      "bbox": {
+        "x": 0,
+        "y": 658,
+        "width": 691,
+        "height": 98
+      },
+      "detection_confidence": 0.18606032133102418,
+      "match_type": "exact",
+      "matched_product_id": "15003",
+      "match_confidence": 0.6290762424468994
+    },
+    {
+      "frame_number": 240,
+      "timestamp": 8.0,
+      "type": "pants",
+      "bbox": {
+        "x": 0,
+        "y": 790,
+        "width": 691,
+        "height": 131
+      },
+      "detection_confidence": 0.18606032133102418,
+      "match_type": "exact",
+      "matched_product_id": "15003",
+      "match_confidence": 0.6048474311828613
+    },
+    {
+      "frame_number": 240,
+      "timestamp": 8.0,
+      "type": "shirt",
+      "bbox": {
+        "x": 1,
+        "y": 305,
+        "width": 697,
+        "height": 205
+      },
+      "detection_confidence": 0.15002634525299074,
+      "match_type": "exact",
+      "matched_product_id": "15003",
+      "match_confidence": 0.6693386435508728
+    },
+    {
+      "frame_number": 240,
+      "timestamp": 8.0,
+      "type": "pants",
+      "bbox": {
+        "x": 1,
+        "y": 579,
+        "width": 697,
+        "height": 274
+      },
+      "detection_confidence": 0.15002634525299074,
+      "match_type": "exact",
+      "matched_product_id": "15003",
+      "match_confidence": 0.687277615070343
+    },
+    {
+      "frame_number": 240,
+      "timestamp": 8.0,
+      "type": "shirt",
+      "bbox": {
+        "x": 212,
+        "y": 641,
+        "width": 324,
+        "height": 40
+      },
+      "detection_confidence": 0.07410357594490051,
+      "match_type": "exact",
+      "matched_product_id": "15099",
+      "match_confidence": 0.6015694737434387
+    },
+    {
+      "frame_number": 240,
+      "timestamp": 8.0,
+      "type": "pants",
+      "bbox": {
+        "x": 212,
+        "y": 694,
+        "width": 324,
+        "height": 53
+      },
+      "detection_confidence": 0.07410357594490051,
+      "match_type": "exact",
+      "matched_product_id": "14981",
+      "match_confidence": 0.5775131583213806
+    },
+    {
+      "frame_number": 240,
+      "timestamp": 8.0,
+      "type": "shirt",
+      "bbox": {
+        "x": 210,
+        "y": 644,
+        "width": 489,
+        "height": 97
+      },
+      "detection_confidence": 0.050282806158065796,
+      "match_type": "exact",
+      "matched_product_id": "15099",
+      "match_confidence": 0.5966600179672241
+    },
+    {
+      "frame_number": 240,
+      "timestamp": 8.0,
+      "type": "pants",
+      "bbox": {
+        "x": 210,
+        "y": 775,
+        "width": 489,
+        "height": 130
+      },
+      "detection_confidence": 0.050282806158065796,
+      "match_type": "exact",
+      "matched_product_id": "15003",
+      "match_confidence": 0.627138614654541
+    },
+    {
+      "frame_number": 240,
+      "timestamp": 8.0,
+      "type": "shirt",
+      "bbox": {
+        "x": 1,
+        "y": 411,
+        "width": 701,
+        "height": 94
+      },
+      "detection_confidence": 0.03801480233669281,
+      "match_type": "exact",
+      "matched_product_id": "15105",
+      "match_confidence": 0.6365180611610413
+    },
+    {
+      "frame_number": 240,
+      "timestamp": 8.0,
+      "type": "pants",
+      "bbox": {
+        "x": 1,
+        "y": 536,
+        "width": 701,
+        "height": 125
+      },
+      "detection_confidence": 0.03801480233669281,
+      "match_type": "exact",
+      "matched_product_id": "15003",
+      "match_confidence": 0.5604609847068787
+    },
+    {
+      "frame_number": 240,
+      "timestamp": 8.0,
+      "type": "shirt",
+      "bbox": {
+        "x": 401,
+        "y": 301,
+        "width": 205,
+        "height": 53
+      },
+      "detection_confidence": 0.030632641911506654,
+      "match_type": "exact",
+      "matched_product_id": "15003",
+      "match_confidence": 0.6406090259552002
+    },
+    {
+      "frame_number": 240,
+      "timestamp": 8.0,
+      "type": "pants",
+      "bbox": {
+        "x": 401,
+        "y": 372,
+        "width": 205,
+        "height": 70
+      },
+      "detection_confidence": 0.030632641911506654,
+      "match_type": "exact",
+      "matched_product_id": "15003",
+      "match_confidence": 0.6073459386825562
+    },
+    {
+      "frame_number": 240,
+      "timestamp": 8.0,
+      "type": "shirt",
+      "bbox": {
+        "x": 226,
+        "y": 642,
+        "width": 330,
+        "height": 53
+      },
+      "detection_confidence": 0.017533914744853975,
+      "match_type": "exact",
+      "matched_product_id": "15003",
+      "match_confidence": 0.6040947437286377
+    },
+    {
+      "frame_number": 240,
+      "timestamp": 8.0,
+      "type": "pants",
+      "bbox": {
+        "x": 226,
+        "y": 714,
+        "width": 330,
+        "height": 71
+      },
+      "detection_confidence": 0.017533914744853975,
+      "match_type": "exact",
+      "matched_product_id": "15181",
+      "match_confidence": 0.5727679133415222
+    },
+    {
+      "frame_number": 240,
+      "timestamp": 8.0,
+      "type": "shirt",
+      "bbox": {
+        "x": 262,
+        "y": 751,
+        "width": 406,
+        "height": 61
+      },
+      "detection_confidence": 0.009989708662033081,
+      "match_type": "exact",
+      "matched_product_id": "15003",
+      "match_confidence": 0.6255044937133789
+    },
+    {
+      "frame_number": 240,
+      "timestamp": 8.0,
+      "type": "pants",
+      "bbox": {
+        "x": 262,
+        "y": 832,
+        "width": 406,
+        "height": 81
+      },
+      "detection_confidence": 0.009989708662033081,
+      "match_type": "exact",
+      "matched_product_id": "15003",
+      "match_confidence": 0.5932842493057251
+    },
+    {
+      "frame_number": 270,
+      "timestamp": 9.0,
+      "type": "shirt",
+      "bbox": {
+        "x": 1,
+        "y": 2,
+        "width": 602,
+        "height": 382
+      },
+      "detection_confidence": 0.6565853118896485,
+      "match_type": "exact",
+      "matched_product_id": "15232",
+      "match_confidence": 0.6731163263320923
+    },
+    {
+      "frame_number": 270,
+      "timestamp": 9.0,
+      "type": "pants",
+      "bbox": {
+        "x": 1,
+        "y": 512,
+        "width": 602,
+        "height": 510
+      },
+      "detection_confidence": 0.6565853118896485,
+      "match_type": "exact",
+      "matched_product_id": "14981",
+      "match_confidence": 0.7211326956748962
+    },
+    {
+      "frame_number": 270,
+      "timestamp": 9.0,
+      "type": "shirt",
+      "bbox": {
+        "x": 398,
+        "y": 192,
+        "width": 258,
+        "height": 324
+      },
+      "detection_confidence": 0.5660115242004394,
+      "match_type": "exact",
+      "matched_product_id": "15232",
+      "match_confidence": 0.6548742055892944
+    },
+    {
+      "frame_number": 270,
+      "timestamp": 9.0,
+      "type": "pants",
+      "bbox": {
+        "x": 398,
+        "y": 625,
+        "width": 258,
+        "height": 433
+      },
+      "detection_confidence": 0.5660115242004394,
+      "match_type": "exact",
+      "matched_product_id": "14999",
+      "match_confidence": 0.7307274341583252
+    },
+    {
+      "frame_number": 270,
+      "timestamp": 9.0,
+      "type": "shirt",
+      "bbox": {
+        "x": 457,
+        "y": 62,
+        "width": 234,
+        "height": 364
+      },
+      "detection_confidence": 0.034165069460868835,
+      "match_type": "exact",
+      "matched_product_id": "15003",
+      "match_confidence": 0.6676952838897705
+    },
+    {
+      "frame_number": 270,
+      "timestamp": 9.0,
+      "type": "pants",
+      "bbox": {
+        "x": 457,
+        "y": 548,
+        "width": 234,
+        "height": 485
+      },
+      "detection_confidence": 0.034165069460868835,
+      "match_type": "exact",
+      "matched_product_id": "14999",
+      "match_confidence": 0.6883988380432129
+    },
+    {
+      "frame_number": 270,
+      "timestamp": 9.0,
+      "type": "handbag",
+      "bbox": {
+        "x": 454,
+        "y": 460,
+        "width": 186,
+        "height": 615
+      },
+      "detection_confidence": 0.01947220042347908,
+      "match_type": "exact",
+      "matched_product_id": "14999",
+      "match_confidence": 0.7050042152404785
+    },
+    {
+      "frame_number": 300,
+      "timestamp": 10.0,
+      "type": "shirt",
+      "bbox": {
+        "x": 3,
+        "y": 1,
+        "width": 716,
+        "height": 376
+      },
+      "detection_confidence": 0.3579128742218018,
+      "match_type": "exact",
+      "matched_product_id": "15169",
+      "match_confidence": 0.6680022478103638
+    },
+    {
+      "frame_number": 300,
+      "timestamp": 10.0,
+      "type": "pants",
+      "bbox": {
+        "x": 3,
+        "y": 503,
+        "width": 716,
+        "height": 501
+      },
+      "detection_confidence": 0.3579128742218018,
+      "match_type": "exact",
+      "matched_product_id": "15232",
+      "match_confidence": 0.7025841474533081
+    },
+    {
+      "frame_number": 300,
+      "timestamp": 10.0,
+      "type": "shirt",
+      "bbox": {
+        "x": 9,
+        "y": 13,
+        "width": 701,
+        "height": 229
+      },
+      "detection_confidence": 0.14796544313430787,
+      "match_type": "exact",
+      "matched_product_id": "15099",
+      "match_confidence": 0.6468233466148376
+    },
+    {
+      "frame_number": 300,
+      "timestamp": 10.0,
+      "type": "pants",
+      "bbox": {
+        "x": 9,
+        "y": 319,
+        "width": 701,
+        "height": 306
+      },
+      "detection_confidence": 0.14796544313430787,
+      "match_type": "exact",
+      "matched_product_id": "15195",
+      "match_confidence": 0.7123900651931763
+    },
+    {
+      "frame_number": 330,
+      "timestamp": 11.0,
+      "type": "shirt",
+      "bbox": {
+        "x": 4,
+        "y": 55,
+        "width": 672,
+        "height": 366
+      },
+      "detection_confidence": 0.679436731338501,
+      "match_type": "exact",
+      "matched_product_id": "15003",
+      "match_confidence": 0.6884887218475342
+    },
+    {
+      "frame_number": 330,
+      "timestamp": 11.0,
+      "type": "pants",
+      "bbox": {
+        "x": 4,
+        "y": 544,
+        "width": 672,
+        "height": 488
+      },
+      "detection_confidence": 0.679436731338501,
+      "match_type": "exact",
+      "matched_product_id": "15003",
+      "match_confidence": 0.7098000049591064
+    }
+  ]
 }

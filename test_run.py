@@ -5,6 +5,12 @@ import argparse
 from typing import List, Dict
 import csv
 import random
+import os
+
+def parse_args():
+    parser = argparse.ArgumentParser(description='Process video with Flickd Engine')
+    parser.add_argument('--input', type=str, required=True, help='Path to input video file')
+    return parser.parse_args()
 
 def load_product_catalog(csv_path: str, max_products: int = 200) -> List[Dict]:
     """
@@ -71,70 +77,27 @@ def process_media(media_path: str, caption: str, hashtags: List[str], engine: Fl
         )
 
 def main():
-    # Set up argument parser
-    parser = argparse.ArgumentParser(description='Process video or image with Flickd Engine')
-    parser.add_argument('--input', type=str, help='Path to input video or image file')
-    parser.add_argument('--caption', type=str, default="Sunkissed Summer has landed. Think golden hour, every hour. Easy silhouettes. Bare shoulders. Dresses that breathe. Made for holiday glow, even if you're just stepping out for coffee.", help='Caption text')
-    parser.add_argument('--hashtags', type=str, nargs='+', default=["summer", "fashion", "style"], help='List of hashtags')
-    parser.add_argument('--max-products', type=int, default=200, help='Maximum number of products to load from catalog')
-    args = parser.parse_args()
-
-    # Initialize the Flickd engine
-    engine = FlickdEngine()
-
-    # Load product catalog from CSV
-    data_dir = Path("data")
-    csv_path = data_dir / "images.csv"
+    # Parse arguments
+    args = parse_args()
     
-    if not csv_path.exists():
-        print(f"\nError: Product catalog CSV not found at: {csv_path}")
-        return
-        
-    print("Loading product catalog from CSV...")
-    product_catalog = load_product_catalog(str(csv_path), args.max_products)
-    print(f"Loaded {len(product_catalog)} unique products")
-
-    # Build product index
-    print("\nBuilding product index...")
-    engine.product_matcher.build_product_index(product_catalog)
-
-    # Get the path to the input file
-    if args.input:
-        media_path = Path(args.input)
-    else:
-        # Default to the test video if no input specified
-        videos_dir = data_dir / "videos"
-        videos_dir.mkdir(exist_ok=True, parents=True)
-        media_path = videos_dir / "2025-05-27_13-46-16_UTC.mp4"
-
-    if not media_path.exists():
-        print(f"\nError: Input file not found at: {media_path}")
-        return
-
-    print(f"\nProcessing: {media_path}")
-    print("Caption:", args.caption)
-    print("Hashtags:", args.hashtags)
-
-    # Process the media and get results
-    results = process_media(
-        str(media_path),
-        args.caption,
-        args.hashtags,
-        engine
-    )
-
-    # Create outputs directory if it doesn't exist
-    outputs_dir = Path("outputs")
-    outputs_dir.mkdir(exist_ok=True)
-
+    # Initialize FlickdEngine
+    engine = FlickdEngine()
+    
+    # Process video
+    print(f"\nProcessing video: {args.input}")
+    
+    # Get video metadata
+    video_path = args.input
+    video_name = os.path.basename(video_path)
+    video_id = video_name.split('.')[0]  # Use filename without extension as ID
+    
+    # Process the video
+    results = engine.process_video(video_path)
+    
     # Save results
-    output_path = outputs_dir / f"output_{media_path.stem}.json"
+    output_path = os.path.join('outputs', f'output_{video_id}.json')
     engine.save_results(results, output_path)
+    print(f"\nResults saved to: {output_path}")
 
-    # Print results
-    print(f"\nProcessing complete! Results saved to: {output_path}")
-    print("\nResults preview:")
-    print(json.dumps(results, indent=2))
-
-if __name__ == "__main__":
+if __name__ == '__main__':
     main() 
